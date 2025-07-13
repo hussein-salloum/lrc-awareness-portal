@@ -1,0 +1,153 @@
+body {
+  font-family: "Open Sans", "Segoe UI", sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Language Toggle */
+.lang-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  background: #eaeaea;
+  border-radius: 30px;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.lang-toggle button {
+  background: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 0 2px;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  color: #444;
+}
+
+.lang-toggle button.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+
+/* Logos */
+.logo-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-bar img {
+  height: 50px;
+}
+
+/* Alerts */
+.alert-bar {
+  background-color: #ff4444;
+  color: white;
+  padding: 12px;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.alert-feed {
+  background: #fff3f3;
+  padding: 15px;
+  max-height: 100px;
+  overflow-y: auto;
+  font-size: 0.95em;
+  border-bottom: 1px solid #e0cfcf;
+}
+
+/* Section Title */
+.section-title {
+  padding: 20px;
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: #333;
+  background: #ffffff;
+}
+
+/* Cards */
+.card-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Smooth text transitions */
+.lang-text,
+.lang-desc,
+.lang-switch {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #222;
+}
+
+.card-content p {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: row; /* Force image to stay on the left */
+    align-items: center;
+    text-align: left;
+  }
+
+  .card img {
+    width: 120px;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 10px 15px;
+  }
+}
