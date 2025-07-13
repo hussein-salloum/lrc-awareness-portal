@@ -90,12 +90,15 @@ body {
 
 .card {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
   background-color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 120px;
 }
 
 .card:hover {
@@ -105,8 +108,9 @@ body {
 
 .card img {
   width: 120px;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .card-content {
@@ -137,7 +141,7 @@ body {
 
 @media (max-width: 600px) {
   .card {
-    flex-direction: row; /* Force image to stay on the left */
+    flex-direction: column; /* Force image to stay on the left */
     align-items: center;
     text-align: left;
   }
