@@ -141,7 +141,6 @@ body {
 
 @media (max-width: 600px) {
   .card {
-    flex-direction: column; /* Force image to stay on the left */
     align-items: center;
     text-align: left;
   }
