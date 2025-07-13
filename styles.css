@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: "Open Sans", "Segoe UI", sans-serif;
   background: #f4f7fb;
@@ -5,7 +6,7 @@ body {
   padding: 0;
 }
 
-/* Language Toggle */
+/* Language Toggle Button */
 .lang-toggle {
   position: absolute;
   top: 10px;
@@ -15,6 +16,7 @@ body {
   border-radius: 30px;
   padding: 5px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .lang-toggle button {
@@ -35,7 +37,6 @@ body {
   color: white;
 }
 
-
 /* Logos */
 .logo-bar {
   display: flex;
@@ -51,7 +52,7 @@ body {
   height: 50px;
 }
 
-/* Alerts */
+/* Alert Bar */
 .alert-bar {
   background-color: #ff4444;
   color: white;
@@ -80,7 +81,7 @@ body {
   background: #ffffff;
 }
 
-/* Cards */
+/* Card List */
 .card-list {
   padding: 20px;
   display: flex;
@@ -88,10 +89,11 @@ body {
   gap: 20px;
 }
 
+/* Cards */
 .card {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: center;
   background-color: #ffffff;
   border-radius: 12px;
   overflow: hidden;
@@ -109,22 +111,18 @@ body {
 .card img {
   width: 120px;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f0f0f0;
   flex-shrink: 0;
 }
 
+/* Card Content */
 .card-content {
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-/* Smooth text transitions */
-.lang-text,
-.lang-desc,
-.lang-switch {
-  transition: all 0.3s ease-in-out;
+  flex: 1;
 }
 
 .card-content h3 {
@@ -139,15 +137,23 @@ body {
   color: #555;
 }
 
+/* Smooth Transitions */
+.lang-text,
+.lang-desc,
+.lang-switch {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .card {
+    flex-direction: row;
     align-items: center;
-    text-align: left;
   }
 
   .card img {
-    width: 120px;
-    height: auto;
+    width: 100px;
+    height: 100%;
   }
 
   .card-content {
